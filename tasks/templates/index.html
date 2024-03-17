@@ -1,0 +1,15 @@
+<!-- templates/tasks/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juego del Ahorcado</title>
+</head>
+<body>
+    <h1>¡Bienvenido al Juego del Ahorcado!</h1>
+    <form method="post" action="{% url 'play_hangman' %}">
+        {% csrf_token %}
+        <input type="submit" value="Comenzar">
+    </form>
+</body>
+</html>
